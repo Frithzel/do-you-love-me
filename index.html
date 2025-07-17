@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta info and title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Do You Love Me?</title>
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Main container for everything -->
+  <div class="container">
+
+    <!-- First screen: Question -->
+    <div class="question-container">
+      <!-- Cute asking GIF -->
+      <img class="gif" src="reply.gif" alt="Do you love me?">
+
+      <!-- The question text -->
+      <h2 class="question">Do you love me?</h2>
+
+      <!-- Buttons -->
+      <div class="button-container">
+        <button class="yes-btn">Yes</button>
+        <button class="no-btn">No</button>
+      </div>
+    </div>
+
+    <!-- Second screen: Response (initially hidden) -->
+    <div class="result-container hidden">
+      <img class="gif" src="love.gif" alt="Love response">
+      <h2>You knew it! ❤️</h2>
+    </div>
+  </div>
+
+  <!-- JavaScript for button actions -->
+  <script>
+    // Grab elements from the page
+    const yesBtn = document.querySelector(".yes-btn");
+    const noBtn = document.querySelector(".no-btn");
+    const questionContainer = document.querySelector(".question-container");
+    const resultContainer = document.querySelector(".result-container");
+
+    // When "Yes" is clicked, hide the question and show the result
+    yesBtn.addEventListener("click", () => {
+      questionContainer.classList.add("hidden");
+      resultContainer.classList.remove("hidden");
+    });
+
+    // When hovering on "No", it randomly moves to avoid being clicked
+    noBtn.addEventListener("mouseover", () => {
+      noBtn.style.position = "absolute"; // Make it moveable
+      noBtn.style.top = Math.random() * 80 + "%"; // Random vertical position
+      noBtn.style.left = Math.random() * 80 + "%"; // Random horizontal position
+    });
+  </script>
+</body>
+</html>

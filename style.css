@@ -1,0 +1,70 @@
+/* Reset default spacing & use fun font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Center everything in the middle of the screen */
+body {
+  background-color: #fce4ec; /* Soft pink background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Container to hold all content */
+.container {
+  text-align: center;
+}
+
+/* Style for the GIFs */
+.gif {
+  width: 250px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Style for the question text */
+.question {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Hold buttons side-by-side */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* All buttons default style */
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* "Yes" button style */
+.yes-btn {
+  background-color: #ff80ab; /* Cute pink */
+  color: white;
+}
+
+/* "No" button style + initial position */
+.no-btn {
+  background-color: #90a4ae; /* Gray-blue */
+  color: white;
+  position: relative; /* Needed so we can move it */
+}
+
+/* Utility class to hide content */
+.hidden {
+  display: none;
+}
